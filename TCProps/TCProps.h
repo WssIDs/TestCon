@@ -3,11 +3,11 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.00.0603 */
-/* at Wed May 02 14:07:35 2018
+ /* File created by MIDL compiler version 7.00.0555 */
+/* at Wed May 02 22:13:25 2018
  */
 /* Compiler settings for TCProps.idl:
-    Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 8.00.0603 
+    Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 7.00.0555 
     protocol : dce , ms_ext, c_ext, robust
     error checks: allocation ref bounds_check enum stub_data 
     VC __declspec() decoration level: 
@@ -21,7 +21,7 @@
 
 /* verify that the <rpcndr.h> version is high enough to compile this file*/
 #ifndef __REQUIRED_RPCNDR_H_VERSION__
-#define __REQUIRED_RPCNDR_H_VERSION__ 500
+#define __REQUIRED_RPCNDR_H_VERSION__ 475
 #endif
 
 #include "rpc.h"
@@ -44,7 +44,6 @@
 #ifndef __ITCExtendedControl_FWD_DEFINED__
 #define __ITCExtendedControl_FWD_DEFINED__
 typedef interface ITCExtendedControl ITCExtendedControl;
-
 #endif 	/* __ITCExtendedControl_FWD_DEFINED__ */
 
 
@@ -134,7 +133,6 @@ EXTERN_C const IID IID_ITCExtendedControl;
         
     };
     
-    
 #else 	/* C style interface */
 
     typedef struct ITCExtendedControlVtbl
@@ -145,7 +143,7 @@ EXTERN_C const IID IID_ITCExtendedControl;
             ITCExtendedControl * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
+            __RPC__deref_out  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ITCExtendedControl * This);
@@ -173,22 +171,14 @@ EXTERN_C const IID IID_ITCExtendedControl;
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
             ITCExtendedControl * This,
-            /* [annotation][in] */ 
-            _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
-            _In_  REFIID riid,
-            /* [annotation][in] */ 
-            _In_  LCID lcid,
-            /* [annotation][in] */ 
-            _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
+            /* [in] */ DISPID dispIdMember,
+            /* [in] */ REFIID riid,
+            /* [in] */ LCID lcid,
+            /* [in] */ WORD wFlags,
+            /* [out][in] */ DISPPARAMS *pDispParams,
+            /* [out] */ VARIANT *pVarResult,
+            /* [out] */ EXCEPINFO *pExcepInfo,
+            /* [out] */ UINT *puArgErr);
         
         /* [id][propput] */ HRESULT ( STDMETHODCALLTYPE *put_Name )( 
             ITCExtendedControl * This,
